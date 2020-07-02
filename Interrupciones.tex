@@ -67,6 +67,8 @@ Estas interrupciones son asincronas, es decir se pueden producir en cualquier mo
         \item{No enmascarables:}
         El procesador no puede evitar atenderlas y tienen mayor prioridad.
   \end{itemize}
+  
+  Estas interrupciones son señales generadas desde dispositivos físicos. Así le informan al procesador que el dispositivo requiere atención, ahí es cuando se detiene la ejecucuión principal. Pueden originadas desde dispositivos como teclados, reloj,impresora,puerto serie, etcétera.
 \end{itemize}
 \section*{Interrupciones de software}
 Estas interrupciones son sincronas, ya que se producen cuando un usuario solicita un llamado al sistema. Es dcir, son generadas por un programa mientras se está ejutando. Este tipo de interrupciones se pueden separar en dos tipos:
@@ -74,6 +76,9 @@ Estas interrupciones son sincronas, ya que se producen cuando un usuario solicit
         \item{Iterrupciones del sistema operativo.}
         \item{Interrupciones del usuario:} 
   \end{itemize}
+  
+El sistema operativo es un sistema de control y como tal controla la ejecución de los programas. Las interrupciones por software dependen de las llamadas al sistema y estas no dependen de los lenguajes de programación,ni del hardware, ya que la interrupción solo es una petición o llamado al sistema operativo.
+
 \section*{Excepciones}
 Estas son sincrónicas, se dan cuando se detecta una situación de error mientras se ejecutaba una instrucción.
 Su principal diferencia es que mientras que en las interrupciones el programa principal se pone en pausa, en las excepciones la istrucción a bordo es abortada.
@@ -83,8 +88,10 @@ Su principal diferencia es que mientras que en las interrupciones el programa pr
     \item Interrupciones de software.
     \item Iterrupciones de hardware.
 \end{enumerate}
-Ahora en los microprocesadores hay dos tipos de interrupciones,la primera corresponde a eventos que generan un estado lógico (Cambio de voltaje). El segundo tipo corresponde a las interrupciones que pueden ser cambiadaspor softwareen los pins del microprocesador.
+Ahora en los microprocesadores hay dos tipos de interrupciones,la primera corresponde a eventos que generan un estado lógico (Cambio de voltaje). El segundo tipo corresponde a las interrupciones que pueden ser cambiadaspor softwareen los pines del microprocesador.\\\\
 
+
+El ejemplo práctico realizado con arduino se ve en el video adjunto, se desarrolló siguiendo los pasos de \cite{6}
 
 \begin{thebibliography}{0}
   \bibitem {1}Concepto de interrupciones. (s.f) .Lenguaje ensamblador.
@@ -92,6 +99,7 @@ Ahora en los microprocesadores hay dos tipos de interrupciones,la primera corres
   \bibitem{2} Jorge Luis Tinoco.(2011). Interrupciones del microprocesador. https://es.slideshare.net/jorg-leoxd/interrupciones-del-microprocesador
   \bibitem{3} Interrupciones.(s.f). Estructura de computadores,Facultad de Informática,UCM. http://www.fdi.ucm.es/profesor/jjruz/WEB2/Temas/Curso05-06/EC9.pdf
   \bibitem{4}Kishin Aimura.(2014).Interrupciones y excepciones del S.O.https://prezi.com/k-shlyu6hqr2/interrupciones-y-excepciones-del-so/\bibitem{5} Iterrupciones de entrada y salida.(2012).http://mariolopezchavez.blogspot.com/
+  \bibitem{6} Luis del Valle Hernández.(s.f).Interrupciones con Arduino a través de un ejemplo práctico. https://programarfacil.com/blog/arduino-blog/interrupciones-con-arduino-ejemplo-practico/
 \end{thebibliography}
 
 \end{document}
